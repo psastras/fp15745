@@ -4,10 +4,18 @@ all:
 
 run:
 	$(CXX) -emit-llvm -O0 -c test1.cpp -o test1.bc
+
+	opt -q -f -insert-edge-profiling test1.bc -o test1_prof.ssa
+	mv test1_prof.ssa test1_prof.bc
+	./llc test1_prof.bc
+	$(CXX) -lstdc++ -Llib/ -lprofile_rt -Wl,-rpath,'$ORIGIN/lib' test1_prof.s -o test1_prof
+	./test1_prof 50 5
+	llvm-prof test1_prof.bc
+
 	opt -mem2reg test1.bc > test1.ssa
 	mv test1.ssa test1.bc
 	./llc -regalloc=profile test1.bc -o test1_profile.s
 	$(CXX) -lstdc++ test1_profile.s -o test1_profile
 clean:
-	rm pgra.so
+	rm *.s *.bc *.out
 .PHONY: clean all
