@@ -30,8 +30,8 @@ Kernel configured for up to 8 processors.
 Processor type: i486 (Intel 80486)
 Processors active: 0 1 2 3 4 5 6 7
 Primary memory available: 16.00 gigabytes
-Default processor set: 185 tasks, 1197 threads, 8 processors
-Load average: 1.16, Mach factor: 6.83
+Default processor set: 196 tasks, 1257 threads, 8 processors
+Load average: 1.46, Mach factor: 6.53
 /bin/machine           = unknown
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown
@@ -581,8 +581,8 @@ configure: failed program was:
 | }
 configure:7911: result: no
 configure:7922: checking for compiler -Wl,--version-script option
-configure:7978: clang -o conftest -g -O2 -Wl,--version-script=/var/folders/tv/r5yk69vn46dc3fd8qh_s5_sr0000gn/T//fooaDD1qu/export.map   conftest.c  >&5
-ld: unknown option: --version-script=/var/folders/tv/r5yk69vn46dc3fd8qh_s5_sr0000gn/T//fooaDD1qu/export.map
+configure:7978: clang -o conftest -g -O2 -Wl,--version-script=/var/folders/tv/r5yk69vn46dc3fd8qh_s5_sr0000gn/T//foo2h3eXh/export.map   conftest.c  >&5
+ld: unknown option: --version-script=/var/folders/tv/r5yk69vn46dc3fd8qh_s5_sr0000gn/T//foo2h3eXh/export.map
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:7984: $? = 1
 configure: failed program was:
@@ -710,7 +710,7 @@ configure:9586: checking for shl_load
 configure:9642: clang -o conftest -g -O2   conftest.c  >&5
 Undefined symbols for architecture x86_64:
   "_shl_load", referenced from:
-      _main in conftest-z5ECKv.o
+      _main in conftest-mB0s5S.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:9648: $? = 1
@@ -1177,7 +1177,7 @@ configure:10861: checking for argz_append
 configure:10917: clang -o conftest -g -O2   conftest.c  >&5
 Undefined symbols for architecture x86_64:
   "_argz_append", referenced from:
-      _main in conftest-4odylK.o
+      _main in conftest-o2w2yz.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:10923: $? = 1
@@ -1283,7 +1283,7 @@ configure:10861: checking for argz_create_sep
 configure:10917: clang -o conftest -g -O2   conftest.c  >&5
 Undefined symbols for architecture x86_64:
   "_argz_create_sep", referenced from:
-      _main in conftest-h060J5.o
+      _main in conftest-vAWTs8.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:10923: $? = 1
@@ -1389,7 +1389,7 @@ configure:10861: checking for argz_insert
 configure:10917: clang -o conftest -g -O2   conftest.c  >&5
 Undefined symbols for architecture x86_64:
   "_argz_insert", referenced from:
-      _main in conftest-PrQvpy.o
+      _main in conftest-d0DPNp.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:10923: $? = 1
@@ -1495,7 +1495,7 @@ configure:10861: checking for argz_next
 configure:10917: clang -o conftest -g -O2   conftest.c  >&5
 Undefined symbols for architecture x86_64:
   "_argz_next", referenced from:
-      _main in conftest-y0Bk6e.o
+      _main in conftest-4pKYld.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:10923: $? = 1
@@ -1601,7 +1601,7 @@ configure:10861: checking for argz_stringify
 configure:10917: clang -o conftest -g -O2   conftest.c  >&5
 Undefined symbols for architecture x86_64:
   "_argz_stringify", referenced from:
-      _main in conftest-PsoiPk.o
+      _main in conftest-zH8Tbf.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:10923: $? = 1
@@ -2637,7 +2637,7 @@ configure:12638: checking for library containing mallinfo
 configure:12679: clang -o conftest -g -O2   conftest.c -lm  >&5
 Undefined symbols for architecture x86_64:
   "_mallinfo", referenced from:
-      _main in conftest-dsPjZg.o
+      _main in conftest-Bj5aas.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:12685: $? = 1
@@ -5532,6 +5532,7 @@ config.status:757: creating bindings/ocaml/llvm/META.llvm
 config.status:757: creating include/llvm/Config/config.h
 config.status:757: creating include/llvm/Config/llvm-config.h
 config.status:757: creating include/llvm/Support/DataTypes.h
+config.status:1158: include/llvm/Support/DataTypes.h is unchanged
 config.status:1171: executing setup commands
 config.status:1171: executing Makefile commands
 config.status:1171: executing Makefile.common commands
@@ -5546,7 +5547,7 @@ config.status:1171: executing utils/Makefile commands
 config.status:1171: executing projects/Makefile commands
 config.status:1171: executing bindings/Makefile commands
 config.status:1171: executing bindings/ocaml/Makefile.ocaml commands
-configure:22794: === configuring in projects/sample (/Users/psastras/Projects/alloc/llvm-3.1.src/projects/sample)
+configure:22794: === configuring in projects/sample (/Users/psastras/Projects/fp15745/alloc/llvm-3.1.src/projects/sample)
 configure:22897: running /bin/sh ./configure --prefix=/usr/local  --cache-file=/dev/null --srcdir=.
 
 ## ---------------- ##
@@ -5866,7 +5867,7 @@ LIBOBJS=''
 LIBS='-lpthread -lm '
 LINKALL='-Wl,-all_load'
 LLVM_BINDIR='/usr/local/bin'
-LLVM_CONFIGTIME='Wed Apr 17 07:03:41 EDT 2013'
+LLVM_CONFIGTIME='Wed Apr 17 20:50:20 EDT 2013'
 LLVM_COPYRIGHT='Copyright (c) 2003-2012 University of Illinois at Urbana-Champaign.'
 LLVM_CROSS_COMPILING='0'
 LLVM_DATADIR='/usr/local/share/llvm'
@@ -6150,7 +6151,7 @@ target_vendor='apple'
 #define LLVM_INCLUDEDIR "/usr/local/include"
 #define LLVM_INFODIR "/usr/local/info"
 #define LLVM_MANDIR "/usr/local/man"
-#define LLVM_CONFIGTIME "Wed Apr 17 07:03:41 EDT 2013"
+#define LLVM_CONFIGTIME "Wed Apr 17 20:50:20 EDT 2013"
 #define LLVM_DEFAULT_TARGET_TRIPLE "x86_64-apple-darwin12.2.1"
 
 configure: exit 0

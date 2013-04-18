@@ -328,7 +328,7 @@ Copyright (C) 2006 Free Software Foundation, Inc.
 This config.status script is free software; the Free Software Foundation
 gives unlimited permission to copy, distribute and modify it."
 
-ac_pwd='/Users/psastras/Projects/alloc/llvm-3.1.src'
+ac_pwd='/Users/psastras/Projects/fp15745/alloc/llvm-3.1.src'
 srcdir='.'
 INSTALL='/usr/bin/install -c'
 # If no file are specified by the user, then we need to provide default
@@ -688,7 +688,7 @@ s,@LLVM_ETCDIR@,|#_!!_#|/usr/local/etc/llvm,g
 s,@LLVM_INCLUDEDIR@,|#_!!_#|/usr/local/include,g
 s,@LLVM_INFODIR@,|#_!!_#|/usr/local/info,g
 s,@LLVM_MANDIR@,|#_!!_#|/usr/local/man,g
-s,@LLVM_CONFIGTIME@,|#_!!_#|Wed Apr 17 07:03:41 EDT 2013,g
+s,@LLVM_CONFIGTIME@,|#_!!_#|Wed Apr 17 20:50:20 EDT 2013,g
 s,@BINDINGS_TO_BUILD@,|#_!!_#|,g
 s,@ALL_BINDINGS@,|#_!!_#|ocaml,g
 s,@OCAML_LIBDIR@,|#_!!_#|,g
@@ -1144,7 +1144,7 @@ s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_ETCDIR\)[	 (].*,\1define\2 "/usr/local/etc/llvm" 
 s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_INCLUDEDIR\)[	 (].*,\1define\2 "/usr/local/include" ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_INFODIR\)[	 (].*,\1define\2 "/usr/local/info" ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_MANDIR\)[	 (].*,\1define\2 "/usr/local/man" ,
-s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_CONFIGTIME\)[	 (].*,\1define\2 "Wed Apr 17 07:03:41 EDT 2013" ,
+s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_CONFIGTIME\)[	 (].*,\1define\2 "Wed Apr 17 20:50:20 EDT 2013" ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_DEFAULT_TARGET_TRIPLE\)[	 (].*,\1define\2 "x86_64-apple-darwin12.2.1" ,
 s/ $//
 s,^[	 #]*u.*,/* & */,
