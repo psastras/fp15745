@@ -48,13 +48,13 @@ Ltmp18:
 	.cfi_offset %r15, -24
 Ltmp19:
 	.cfi_offset %rbp, -16
-	movl	%ecx, %ebx
-	movq	%rdx, (%rsp)            ## 8-byte Spill
-	movq	%rsi, %r14
-	movq	%rdi, %r13
-	movl	%ebx, %r12d
-	imull	%r12d, %r12d
-	xorl	%r15d, %r15d
+	movl	%ecx, %r14d
+	movq	%rdx, %r13
+	movq	%rsi, (%rsp)            ## 8-byte Spill
+	movq	%rdi, %r12
+	movl	%r14d, %r15d
+	imull	%r15d, %r15d
+	xorl	%ebx, %ebx
 	xorl	%ebp, %ebp
 	jmp	LBB0_1
 	.align	4, 0x90
@@ -72,40 +72,40 @@ LBB0_8:                                 ##   in Loop: Header=BB0_1 Depth=1
 	cvtss2sd	%xmm0, %xmm0
 	divsd	LCPI0_1(%rip), %xmm0
 	cvtsd2ss	%xmm0, %xmm0
-	movss	%xmm0, (%r13,%r15,4)
-	movq	(%rsp), %rax            ## 8-byte Reload
-	movl	$0, (%rax,%r15,4)
-	incq	%r15
+	movss	%xmm0, (%r12,%rbx,4)
+	movl	$0, (%r13,%rbx,4)
+	incq	%rbx
 LBB0_1:                                 ## =>This Inner Loop Header: Depth=1
-	cmpl	%r12d, %r15d
+	cmpl	%r15d, %ebx
 	jl	LBB0_8
 ## BB#2:
-	leaq	LCPI0_0(%rip), %rsi
+	leaq	LCPI0_0(%rip), %rdi
+	movq	(%rsp), %rsi            ## 8-byte Reload
 	jmp	LBB0_3
 	.align	4, 0x90
 LBB0_6:                                 ##   in Loop: Header=BB0_3 Depth=1
 	incl	%ebp
 LBB0_3:                                 ## =>This Loop Header: Depth=1
                                         ##     Child Loop BB0_4 Depth 2
-	xorl	%ecx, %ecx
-	cmpl	%ebx, %ebp
-	movl	%ebp, %edx
+	xorl	%edx, %edx
+	cmpl	%r14d, %ebp
+	movl	%ebp, %ecx
 	jge	LBB0_7
 	jmp	LBB0_4
 	.align	4, 0x90
 LBB0_5:                                 ##   in Loop: Header=BB0_4 Depth=2
-	cmpl	%ecx, %ebp
+	cmpl	%edx, %ebp
 	sete	%al
 	movzbl	%al, %eax
-	movsd	(%rsi,%rax,8), %xmm0
+	movsd	(%rdi,%rax,8), %xmm0
 	cvtsd2ss	%xmm0, %xmm0
-	movslq	%edx, %rax
-	movss	%xmm0, (%r14,%rax,4)
-	addl	%ebx, %edx
-	incl	%ecx
+	movslq	%ecx, %rax
+	movss	%xmm0, (%rsi,%rax,4)
+	addl	%r14d, %ecx
+	incl	%edx
 LBB0_4:                                 ##   Parent Loop BB0_3 Depth=1
                                         ## =>  This Inner Loop Header: Depth=2
-	cmpl	%ebx, %ecx
+	cmpl	%r14d, %edx
 	jge	LBB0_6
 	jmp	LBB0_5
 LBB0_7:
@@ -124,7 +124,7 @@ LBB0_7:
 __Z9BlockMultPfS_S_i:                   ## @_Z9BlockMultPfS_S_i
 	.cfi_startproc
 ## BB#0:
-	pushq	%rbp
+	pushq	%r14
 Ltmp23:
 	.cfi_def_cfa_offset 16
 	pushq	%rbx
@@ -133,60 +133,60 @@ Ltmp24:
 Ltmp25:
 	.cfi_offset %rbx, -24
 Ltmp26:
-	.cfi_offset %rbp, -16
-	movl	%ecx, %r8d
-	movq	%rdx, %rbx
-	movq	%rsi, %r11
-	xorl	%ebp, %ebp
+	.cfi_offset %r14, -16
+	movq	%rdx, %r14
+	movq	%rsi, %rbx
+	movq	%rdi, %r11
+	xorl	%edi, %edi
 	xorl	%r10d, %r10d
 	jmp	LBB1_1
 	.align	4, 0x90
 LBB1_6:                                 ##   in Loop: Header=BB1_1 Depth=1
-	addl	%r8d, %ebp
+	addl	%ecx, %edi
 	incl	%r10d
 LBB1_1:                                 ## =>This Loop Header: Depth=1
                                         ##     Child Loop BB1_2 Depth 2
                                         ##       Child Loop BB1_3 Depth 3
-	cmpl	%r8d, %r10d
-	movl	$0, %r9d
+	cmpl	%ecx, %r10d
+	movl	$0, %esi
 	jge	LBB1_7
 	jmp	LBB1_2
 	.align	4, 0x90
 LBB1_5:                                 ##   in Loop: Header=BB1_2 Depth=2
-	incl	%r9d
+	incl	%esi
 LBB1_2:                                 ##   Parent Loop BB1_1 Depth=1
                                         ## =>  This Loop Header: Depth=2
                                         ##       Child Loop BB1_3 Depth 3
-	xorl	%esi, %esi
-	cmpl	%r8d, %r9d
-	movl	%ebp, %edx
-	movl	%r9d, %ecx
+	xorl	%edx, %edx
+	cmpl	%ecx, %esi
+	movl	%edi, %r9d
+	movl	%esi, %r8d
 	jge	LBB1_6
 	jmp	LBB1_3
 	.align	4, 0x90
 LBB1_4:                                 ##   in Loop: Header=BB1_3 Depth=3
-	movslq	%edx, %rax
-	movss	(%r11,%rax,4), %xmm0
-	movslq	%ecx, %rax
-	mulss	(%rbx,%rax,4), %xmm0
+	movslq	%r9d, %rax
+	movss	(%rbx,%rax,4), %xmm0
+	movslq	%r8d, %rax
+	mulss	(%r14,%rax,4), %xmm0
 	movl	%r10d, %eax
-	imull	%r8d, %eax
-	addl	%r9d, %eax
+	imull	%ecx, %eax
+	addl	%esi, %eax
 	movslq	%eax, %rax
-	addss	(%rdi,%rax,4), %xmm0
-	movss	%xmm0, (%rdi,%rax,4)
-	addl	%r8d, %ecx
+	addss	(%r11,%rax,4), %xmm0
+	movss	%xmm0, (%r11,%rax,4)
+	addl	%ecx, %r8d
+	incl	%r9d
 	incl	%edx
-	incl	%esi
 LBB1_3:                                 ##   Parent Loop BB1_1 Depth=1
                                         ##     Parent Loop BB1_2 Depth=2
                                         ## =>    This Inner Loop Header: Depth=3
-	cmpl	%r8d, %esi
+	cmpl	%ecx, %edx
 	jge	LBB1_5
 	jmp	LBB1_4
 LBB1_7:
 	popq	%rbx
-	popq	%rbp
+	popq	%r14
 	ret
 	.cfi_endproc
 
@@ -228,54 +228,54 @@ Ltmp45:
 	.cfi_offset %r15, -24
 Ltmp46:
 	.cfi_offset %rbp, -16
-	movq	%rsi, %r12
+	movq	%rsi, %rbx
 	movl	%edi, %eax
 	cmpl	$3, %eax
 	jne	LBB2_10
 ## BB#1:
-	movq	8(%r12), %rax
+	movq	8(%rbx), %rax
 	movq	%rax, %rdi
 	callq	_atoi
-	movl	%eax, %ebx
-	movq	16(%r12), %rax
+	movl	%eax, %r14d
+	movq	16(%rbx), %rax
 	movq	%rax, %rdi
 	callq	_atoi
 	movl	%eax, %ebp
-	imull	%ebx, %ebp
-	movslq	%ebp, %rbx
-	imulq	%rbx, %rbx
-	shlq	$2, %rbx
-	movq	%rbx, %rdi
-	callq	_malloc
-	movq	%rax, %r14
-	movq	%rbx, %rdi
-	callq	_malloc
-	movq	%rax, %r13
-	movq	%rbx, %rdi
+	imull	%r14d, %ebp
+	movslq	%ebp, %r14
+	imulq	%r14, %r14
+	shlq	$2, %r14
+	movq	%r14, %rdi
 	callq	_malloc
 	movq	%rax, %r15
-	testq	%r14, %r14
-	je	LBB2_11
-## BB#2:
-	testq	%r13, %r13
-	je	LBB2_11
-## BB#3:
+	movq	%r14, %rdi
+	callq	_malloc
+	movq	%rax, %r12
+	movq	%r14, %rdi
+	callq	_malloc
+	movq	%rax, %r14
 	testq	%r15, %r15
 	je	LBB2_11
+## BB#2:
+	testq	%r12, %r12
+	je	LBB2_11
+## BB#3:
+	testq	%r14, %r14
+	je	LBB2_11
 ## BB#4:
-	movq	%r14, %rdi
-	movq	%r13, %rsi
-	movq	%r15, %rdx
+	movq	%r15, %rdi
+	movq	%r12, %rsi
+	movq	%r14, %rdx
 	movl	%ebp, %ecx
 	callq	__Z9InitBlockPfS_S_i
-	movq	%r15, %rdi
-	movq	%r14, %rsi
-	movq	%r13, %rdx
+	movq	%r14, %rdi
+	movq	%r15, %rsi
+	movq	%r12, %rdx
 	movl	%ebp, %ecx
 	callq	__Z9BlockMultPfS_S_i
 	xorl	%ebx, %ebx
 	imull	%ebp, %ebp
-	leaq	L_.str2(%rip), %r12
+	leaq	L_.str2(%rip), %r13
 	jmp	LBB2_5
 	.align	4, 0x90
 LBB2_8:                                 ##   in Loop: Header=BB2_5 Depth=1
@@ -284,16 +284,16 @@ LBB2_5:                                 ## =>This Inner Loop Header: Depth=1
 	cmpl	%ebp, %ebx
 	jge	LBB2_9
 ## BB#6:                                ##   in Loop: Header=BB2_5 Depth=1
-	movss	(%r14,%rbx,4), %xmm0
-	ucomiss	(%r15,%rbx,4), %xmm0
+	movss	(%r15,%rbx,4), %xmm0
+	ucomiss	(%r14,%rbx,4), %xmm0
 	jne	LBB2_7
 	jnp	LBB2_8
 LBB2_7:                                 ##   in Loop: Header=BB2_5 Depth=1
-	movss	(%r14,%rbx,4), %xmm0
-	cvtss2sd	%xmm0, %xmm1
 	movss	(%r15,%rbx,4), %xmm0
+	cvtss2sd	%xmm0, %xmm1
+	movss	(%r14,%rbx,4), %xmm0
 	cvtss2sd	%xmm0, %xmm2
-	movq	%r12, %rdi
+	movq	%r13, %rdi
 	movl	%ebx, %esi
 	movaps	%xmm1, %xmm0
 	movl	%ebx, %edx
@@ -306,11 +306,11 @@ LBB2_9:
 	movq	%rax, %rdi
 	xorb	%al, %al
 	callq	_printf
-	movq	%r14, %rdi
-	callq	_free
-	movq	%r13, %rdi
-	callq	_free
 	movq	%r15, %rdi
+	callq	_free
+	movq	%r12, %rdi
+	callq	_free
+	movq	%r14, %rdi
 	callq	_free
 	xorl	%eax, %eax
 	addq	$8, %rsp
@@ -323,29 +323,28 @@ LBB2_9:
 	ret
 LBB2_10:
 	movq	___stderrp@GOTPCREL(%rip), %rax
-	movq	(%rax), %rax
-	leaq	L_.str(%rip), %rcx
-	movq	%rax, %rdi
-	movq	%rcx, %rsi
+	movq	(%rax), %rcx
+	leaq	L_.str(%rip), %rax
+	movq	%rcx, %rdi
+	movq	%rax, %rsi
 	xorb	%al, %al
 	callq	_fprintf
 	movl	$1, %edi
 	callq	_exit
 LBB2_11:
-	movq	(%r12), %rcx
+	movq	(%rbx), %rdx
 	movq	___stderrp@GOTPCREL(%rip), %rax
-	movq	(%rax), %rax
-	leaq	L_.str1(%rip), %rdx
-	movq	%rax, %rdi
-	movq	%rdx, %rsi
-	movq	%rcx, %rdx
+	movq	(%rax), %rcx
+	leaq	L_.str1(%rip), %rax
+	movq	%rcx, %rdi
+	movq	%rax, %rsi
 	xorb	%al, %al
 	callq	_fprintf
-	movq	%r14, %rdi
-	callq	_free
-	movq	%r13, %rdi
-	callq	_free
 	movq	%r15, %rdi
+	callq	_free
+	movq	%r12, %rdi
+	callq	_free
+	movq	%r14, %rdi
 	callq	_free
 	movl	$2, %edi
 	callq	_exit
