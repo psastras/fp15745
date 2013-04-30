@@ -230,7 +230,24 @@ void VirtRegAuxInfo::CalculateWeightAndHint(LiveInterval &li, MachineFunction &M
 
     if (Spillable) {
 
-      totalWeight += (*g_BlockFreqs)[mi->getParent()->getBasicBlock()];
+      if (mi->getParent() != mbb) {
+        mbb = mi->getParent();
+        loop = Loops.getLoopFor(mbb);
+        loopDepth = loop ? loop->getLoopDepth() : 0;
+        isExiting = loop ? loop->isLoopExiting(mbb) : false;
+      }
+
+      // Calculate instr weight.
+      bool reads, writes;
+      tie(reads, writes) = mi->readsWritesVirtualRegister(li.reg);
+      weight = (*g_BlockFreqs)[mi->getParent()->getBasicBlock()];//LiveIntervals::getSpillWeight(writes, reads, loopDepth);
+
+      // // Give extra weight to what looks like a loop induction variable update.
+      // if (writes && isExiting && LIS.isLiveOutOfMBB(li, mbb))
+      //   weight *= 3;
+
+      totalWeight += (reads + writes) * weight;
+      // totalWeight += (*g_BlockFreqs)[mi->getParent()->getBasicBlock()];
 
     }
 
@@ -275,13 +292,13 @@ void VirtRegAuxInfo::CalculateWeightAndHint(LiveInterval &li, MachineFunction &M
   // loads, then it's potentially very cheap to re-materialize.
   // FIXME: this gets much more complicated once we support non-trivial
   // re-materialization.
-  // bool isLoad = false;
-  // if (LIS.isReMaterializable(li, 0, isLoad)) {
-  //   if (isLoad)
-  //     totalWeight *= 0.9F;
-  //   else
-  //     totalWeight *= 0.5F;
-  // }
+  bool isLoad = false;
+  if (LIS.isReMaterializable(li, 0, isLoad)) {
+    if (isLoad)
+      totalWeight *= 0.9F;
+    else
+      totalWeight *= 0.5F;
+  }
 
   li.weight = normalizeSpillWeight(totalWeight, li.getSize());
 }
