@@ -171,7 +171,7 @@ bool LoaderPass::runOnModule(Module &M) {
     }
     if (ReadCount != Counters.size()) {
       errs() << "WARNING: profile information is inconsistent with "
-             << "the current program!\n";
+             << "the current program! " << ReadCount << " "<< Counters.size() <<"\n";
     }
     NumEdgesRead = ReadCount;
   }

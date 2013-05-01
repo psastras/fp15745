@@ -27,6 +27,8 @@
 #include "llvm/Support/Debug.h"
 #include "llvm/Support/ErrorHandling.h"
 
+#include "llvm/CodeGen/WeightHistory.h"
+
 using namespace llvm;
 
 static cl::opt<bool> DisablePostRA("disable-post-ra", cl::Hidden,
@@ -365,6 +367,7 @@ void TargetPassConfig::addMachinePasses() {
     addPass(LocalStackSlotAllocationID);
   }
 
+  addPass(LoadHistoryID);// <---
   // Run pre-ra passes.
   if (addPreRegAlloc())
     printAndVerify("After PreRegAlloc passes");
@@ -379,6 +382,7 @@ void TargetPassConfig::addMachinePasses() {
   // Run post-ra passes.
   if (addPostRegAlloc())
     printAndVerify("After PostRegAlloc passes");
+  addPass(StoreHistoryID);// <---
 
   // Insert prolog/epilog code.  Eliminate abstract frame index references...
   addPass(PrologEpilogCodeInserterID);

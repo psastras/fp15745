@@ -32,6 +32,8 @@
 #include "llvm/PassAnalysisSupport.h"
 #include "llvm/Module.h"
 
+#include "llvm/CodeGen/WeightHistory.h"
+
 using namespace llvm;
 
 char CalculateSpillWeights::ID = 0;
@@ -228,6 +230,7 @@ void VirtRegAuxInfo::CalculateWeightAndHint(LiveInterval &li, MachineFunction &M
 
 
     if (Spillable) {
+//<<<<<<< HEAD
 
       if (mi->getParent() != mbb) {
         mbb = mi->getParent();
@@ -248,6 +251,11 @@ void VirtRegAuxInfo::CalculateWeightAndHint(LiveInterval &li, MachineFunction &M
      totalWeight += (reads + writes) * weight;
       // totalWeight += (*g_BlockFreqs)[mi->getParent()->getBasicBlock()];
 
+// =======
+//       const BasicBlock* BB=mi->getParent()->getBasicBlock();
+//       double scale=randWeight(BB);
+//       totalWeight += scale*(*g_BlockFreqs)[BB];
+// >>>>>>> 1f1812980a69c382bb715ff89d04c3e885b95659
     }
 
 
