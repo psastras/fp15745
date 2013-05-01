@@ -285,8 +285,11 @@ unsigned RABasic::selectOrSplit(LiveInterval &VirtReg,
 
   // No other spill candidates were found, so spill the current VirtReg.
   DEBUG(dbgs() << "spilling: " << VirtReg << '\n');
+  
+
   if (!VirtReg.isSpillable())
     return ~0u;
+  errs() << "spilling: " << VirtReg << " w: " << VirtReg.weight << "\n";
   LiveRangeEdit LRE(VirtReg, SplitVRegs, *MF, *LIS, VRM);
   spiller().spill(LRE);
 

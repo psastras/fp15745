@@ -1,0 +1,131 @@
+name	type	time
+ary 300000	basic	1.474303
+ary 300000	basic	1.466332
+ary 300000	basic	1.480182
+ary 300000	basic	1.471831
+ary 300000	basic	1.493454
+ary 300000	basic	1.478124
+ary 300000	basic	1.470373
+ary 300000	basic	1.465989
+ary 300000	basic	1.473535
+ary 300000	basic	1.469177
+ackermann 12	basic	4.681083
+ackermann 12	basic	4.678970
+ackermann 12	basic	4.778066
+ackermann 12	basic	4.718288
+ackermann 12	basic	4.731263
+ackermann 12	basic	4.752811
+ackermann 12	basic	4.730150
+ackermann 12	basic	4.740967
+ackermann 12	basic	4.714245
+ackermann 12	basic	4.733151
+chameneos 200000	basic	4.934627
+chameneos 200000	basic	4.923533
+chameneos 200000	basic	4.944108
+chameneos 200000	basic	4.934950
+chameneos 200000	basic	4.976017
+chameneos 200000	basic	4.926983
+chameneos 200000	basic	4.965298
+chameneos 200000	basic	4.960012
+chameneos 200000	basic	4.985465
+chameneos 200000	basic	4.999195
+echo 200000	basic	5.158576
+echo 200000	basic	5.161934
+echo 200000	basic	5.153910
+echo 200000	basic	5.490483
+echo 200000	basic	5.425655
+echo 200000	basic	5.244510
+echo 200000	basic	5.241505
+echo 200000	basic	5.175109
+echo 200000	basic	5.182233
+echo 200000	basic	5.146144
+fannkuch 11	basic	1.108240
+fannkuch 11	basic	1.091412
+fannkuch 11	basic	1.099518
+fannkuch 11	basic	1.091880
+fannkuch 11	basic	1.098894
+fannkuch 11	basic	1.126497
+fannkuch 11	basic	1.200060
+fannkuch 11	basic	1.133020
+fannkuch 11	basic	1.197310
+fannkuch 11	basic	1.236391
+except 2000000	basic	3.805553
+except 2000000	basic	3.698779
+except 2000000	basic	3.703751
+except 2000000	basic	3.716910
+except 2000000	basic	3.678486
+except 2000000	basic	3.652057
+except 2000000	basic	3.667278
+except 2000000	basic	3.695147
+except 2000000	basic	3.753491
+except 2000000	basic	3.697466
+fibo 44	basic	4.585753
+fibo 44	basic	4.658036
+fibo 44	basic	4.677923
+fibo 44	basic	4.648203
+fibo 44	basic	4.655728
+fibo 44	basic	4.602011
+fibo 44	basic	4.628905
+fibo 44	basic	4.638207
+fibo 44	basic	4.679392
+fibo 44	basic	4.565186
+harmonic 1500000000	basic	6.165997
+harmonic 1500000000	basic	6.077066
+harmonic 1500000000	basic	6.091871
+harmonic 1500000000	basic	6.003006
+harmonic 1500000000	basic	6.037103
+harmonic 1500000000	basic	6.103247
+harmonic 1500000000	basic	6.055981
+harmonic 1500000000	basic	6.071876
+harmonic 1500000000	basic	6.098698
+harmonic 1500000000	basic	6.125133
+hash2 3000	basic	3.738011
+hash2 3000	basic	3.674975
+hash2 3000	basic	3.692528
+hash2 3000	basic	3.669100
+hash2 3000	basic	3.617900
+hash2 3000	basic	3.648643
+hash2 3000	basic	3.729850
+hash2 3000	basic	3.683390
+hash2 3000	basic	3.687316
+hash2 3000	basic	3.793068
+heapsort 50000000	basic	22.718418
+heapsort 50000000	basic	22.283556
+heapsort 50000000	basic	21.990140
+heapsort 50000000	basic	22.601076
+heapsort 50000000	basic	23.772170
+heapsort 50000000	basic	22.741097
+heapsort 50000000	basic	23.785976
+heapsort 50000000	basic	23.324587
+heapsort 50000000	basic	22.658165
+heapsort 50000000	basic	22.706860
+raytracer 500	basic	10.259045
+raytracer 500	basic	10.389251
+raytracer 500	basic	10.449993
+raytracer 500	basic	10.348194
+raytracer 500	basic	10.357318
+raytracer 500	basic	10.121393
+raytracer 500	basic	10.171404
+raytracer 500	basic	10.193124
+raytracer 500	basic	10.114987
+raytracer 500	basic	10.133123
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	basic	8.835794
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	basic	8.742931
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	basic	8.759323
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	basic	8.756664
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	basic	8.744563
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	basic	8.846585
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	basic	8.787572
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	basic	8.738304
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	basic	8.791914
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	basic	8.971516
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	basic	4.570155
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	basic	4.574077
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	basic	4.587325
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	basic	4.557260
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	basic	4.496470
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	basic	4.506428
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	basic	4.573978
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	basic	4.499727
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	basic	4.488628
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	basic	4.496140

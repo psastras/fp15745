@@ -1,98 +1,391 @@
-ary 200000	basic	0.987
-ary 200000	greedy	0.878
-ary 200000	pbqp	0.983
-ackermann 11	basic	1.186
-ackermann 11	greedy	1.054
-ackermann 11	pbqp	1.068
-chameneos 100000	basic	2.451
-chameneos 100000	greedy	2.450
-chameneos 100000	pbqp	2.447
-echo 100000	basic	2.596
-echo 100000	greedy	2.612
-echo 100000	pbqp	2.611
-fannkuch 10	basic	0.098
-fannkuch 10	greedy	0.095
-fannkuch 10	pbqp	0.098
-except 1000000	basic	1.790
-except 1000000	greedy	1.794
-except 1000000	pbqp	1.834
-fibo 42	basic	1.746
-fibo 42	greedy	1.870
-fibo 42	pbqp	1.752
-harmonic 1000000000	basic	4.024
-harmonic 1000000000	greedy	4.014
-harmonic 1000000000	pbqp	ary 200000	basic	0.980
-ary 200000	greedy	0.879
-ary 200000	pbqp	0.982
-ackermann 11	basic	1.192
-ackermann 11	greedy	1.052
-ackermann 11	pbqp	1.069
-chameneos 100000	basic	2.518
-chameneos 100000	greedy	2.482
-chameneos 100000	pbqp	2.479
-echo 100000	basic	ary 200000	basic	0.991
-ary 200000	greedy	0.874
-ary 200000	pbqp	0.990
-ackermann 11	basic	1.191
-ackermann 11	greedy	1.048
-ackermann 11	pbqp	1.055
-chameneos 100000	basic	2.437
-chameneos 100000	greedy	2.452
-chameneos 100000	pbqp	2.432
-echo 100000	basic	2.584
-echo 100000	greedy	2.588
-echo 100000	pbqp	2.587
-fannkuch 10	basic	0.096
-fannkuch 10	greedy	0.106
-fannkuch 10	pbqp	0.102
-except 1000000	basic	1.812
-except 1000000	greedy	1.801
-except 1000000	pbqp	1.806
-fibo 42	basic	1.750
-fibo 42	greedy	1.877
-fibo 42	pbqp	1.751
-harmonic 1000000000	basic	4.024
-harmonic 1000000000	greedy	4.020
-harmonic 1000000000	pbqp	4.034
-hash2 2000	basic	2.442
-hash2 2000	greedy	2.345
-hash2 2000	pbqp	2.424
-heapsort 20000000	basic	8.110
-heapsort 20000000	greedy	8.054
-heapsort 20000000	pbqp	8.024
-ary 200000	basic	1.319
-ary 200000	greedy	1.135
-ary 200000	pbqp	1.321
-ackermann 11	basic	1.237
-ackermann 11	greedy	1.111
-ackermann 11	pbqp	1.112
-chameneos 100000	basic	ary 300000	basic	1.486
-ary 300000	greedy	1.315
-ary 300000	pbqp	1.486
-ackermann 12	basic	4.699
-ackermann 12	greedy	4.180
-ackermann 12	pbqp	4.310
-chameneos 200000	basic	4.906
-chameneos 200000	greedy	4.889
-chameneos 200000	pbqp	4.884
-echo 200000	basic	5.250
-echo 200000	greedy	5.205
-echo 200000	pbqp	5.195
-fannkuch 11	basic	1.103
-fannkuch 11	greedy	1.124
-fannkuch 11	pbqp	1.098
-except 2000000	basic	3.638
-except 2000000	greedy	3.632
-except 2000000	pbqp	3.680
-fibo 44	basic	4.584
-fibo 44	greedy	4.890
-fibo 44	pbqp	4.548
-harmonic 1500000000	basic	6.033
-harmonic 1500000000	greedy	6.121
-harmonic 1500000000	pbqp	6.115
-hash2 3000	basic	3.695
-hash2 3000	greedy	3.583
-hash2 3000	pbqp	3.775
-heapsort 50000000	basic	23.110
-heapsort 50000000	greedy	23.294
-heapsort 50000000	pbqp	23.013
+name	type	time
+ary 300000	basic	1.521258
+ackermann 12	basic	4.742397
+chameneos 200000	basic	4.913879
+echo 200000	basic	5.195470
+fannkuch 11	basic	1.122827
+except 2000000	basic	3.689921
+fibo 44	basic	4.615937
+harmonic 1500000000	basic	6.049677
+hash2 3000	basic	3.682602
+heapsort 50000000	basic	22.343569
+raytracer 500	basic	10.313036
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	basic	8.861031
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	basic	4.586983
+ary 300000	basic	1.492500
+ackermann 12	basic	4.727798
+chameneos 200000	basic	4.897888
+echo 200000	basic	5.228887
+fannkuch 11	basic	1.207830
+except 2000000	basic	3.677188
+fibo 44	basic	4.584263
+harmonic 1500000000	basic	6.010864
+hash2 3000	basic	3.702836
+heapsort 50000000	basic	22.554647
+raytracer 500	basic	10.391806
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	basic	8.958015
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	basic	4.617539
+ary 300000	basic	1.690632
+ackermann 12	basic	4.734400
+chameneos 200000	basic	4.901955
+echo 200000	basic	5.290589
+fannkuch 11	basic	1.189910
+except 2000000	basic	3.831744
+fibo 44	basic	4.675250
+harmonic 1500000000	basic	6.114769
+hash2 3000	basic	3.807976
+heapsort 50000000	basic	22.957161
+raytracer 500	basic	10.433316
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	basic	8.999478
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	basic	4.592723
+ary 300000	basic	1.497500
+ackermann 12	basic	4.718659
+chameneos 200000	basic	4.939223
+echo 200000	basic	5.320571
+fannkuch 11	basic	1.111771
+except 2000000	basic	3.700898
+fibo 44	basic	4.617659
+harmonic 1500000000	basic	6.050522
+hash2 3000	basic	3.655169
+heapsort 50000000	basic	22.416923
+raytracer 500	basic	10.321285
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	basic	8.801922
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	basic	4.545934
+ary 300000	basic	1.480562
+ackermann 12	basic	4.695955
+chameneos 200000	basic	4.970659
+echo 200000	basic	5.230276
+fannkuch 11	basic	1.105303
+except 2000000	basic	3.724206
+fibo 44	basic	4.641902
+harmonic 1500000000	basic	6.051610
+hash2 3000	basic	3.751658
+heapsort 50000000	basic	22.500654
+raytracer 500	basic	10.492712
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	basic	8.982055
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	basic	4.586211
+ary 300000	basic	1.495782
+ackermann 12	basic	4.790045
+chameneos 200000	basic	4.994029
+echo 200000	basic	5.488827
+fannkuch 11	basic	1.103681
+except 2000000	basic	3.666794
+fibo 44	basic	4.609462
+harmonic 1500000000	basic	6.040209
+hash2 3000	basic	3.643874
+heapsort 50000000	basic	22.528507
+raytracer 500	basic	10.379842
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	basic	8.910257
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	basic	4.511260
+ary 300000	basic	1.505597
+ackermann 12	basic	4.776267
+chameneos 200000	basic	4.949960
+echo 200000	basic	5.293744
+fannkuch 11	basic	1.121608
+except 2000000	basic	3.656621
+fibo 44	basic	4.622984
+harmonic 1500000000	basic	6.041758
+hash2 3000	basic	3.685714
+heapsort 50000000	basic	22.316194
+raytracer 500	basic	10.283809
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	basic	8.733654
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	basic	4.641959
+ary 300000	basic	1.514636
+ackermann 12	basic	4.747207
+chameneos 200000	basic	5.015195
+echo 200000	basic	5.233633
+fannkuch 11	basic	1.091718
+except 2000000	basic	3.685200
+fibo 44	basic	4.633586
+harmonic 1500000000	basic	6.073117
+hash2 3000	basic	3.684806
+heapsort 50000000	basic	22.251159
+raytracer 500	basic	10.258888
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	basic	8.792398
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	basic	4.505825
+ary 300000	basic	1.485363
+ackermann 12	basic	4.708396
+chameneos 200000	basic	4.977713
+echo 200000	basic	5.220910
+fannkuch 11	basic	1.104881
+except 2000000	basic	3.727999
+fibo 44	basic	4.621492
+harmonic 1500000000	basic	6.073192
+hash2 3000	basic	3.664759
+heapsort 50000000	basic	22.206595
+raytracer 500	basic	10.371638
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	basic	8.821974
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	basic	4.598148
+ary 300000	basic	1.488107
+ackermann 12	basic	4.778380
+chameneos 200000	basic	4.971977
+echo 200000	basic	5.283578
+fannkuch 11	basic	1.137496
+except 2000000	basic	3.680892
+fibo 44	basic	4.625150
+harmonic 1500000000	basic	6.041294
+hash2 3000	basic	3.648427
+heapsort 50000000	basic	22.122838
+raytracer 500	basic	10.336464
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	basic	8.780220
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	basic	4.495250
+ary 300000	greedy	1.389757
+ary 300000	pbqp	1.519605
+ackermann 12	greedy	4.303619
+ackermann 12	pbqp	4.381002
+chameneos 200000	greedy	5.195338
+chameneos 200000	pbqp	5.108236
+echo 200000	greedy	5.615638
+echo 200000	pbqp	5.799535
+fannkuch 11	greedy	1.246446
+fannkuch 11	pbqp	1.260161
+except 2000000	greedy	3.717234
+except 2000000	pbqp	3.728962
+fibo 44	greedy	5.011531
+fibo 44	pbqp	4.720254
+harmonic 1500000000	greedy	6.182547
+harmonic 1500000000	pbqp	6.166133
+hash2 3000	greedy	3.599819
+hash2 3000	pbqp	3.800842
+heapsort 50000000	greedy	23.906107
+heapsort 50000000	pbqp	23.904031
+raytracer 500	greedy	10.079383
+raytracer 500	pbqp	10.516976
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	greedy	8.990770
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	pbqp	9.003254
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	greedy	4.726544
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	pbqp	4.703604
+ary 300000	greedy	1.368490
+ary 300000	pbqp	1.514799
+ackermann 12	greedy	4.328405
+ackermann 12	pbqp	4.371542
+chameneos 200000	greedy	5.092223
+chameneos 200000	pbqp	5.100052
+echo 200000	greedy	5.498254
+echo 200000	pbqp	5.468045
+fannkuch 11	greedy	1.160404
+fannkuch 11	pbqp	1.120804
+except 2000000	greedy	3.722044
+except 2000000	pbqp	3.683451
+fibo 44	greedy	4.945342
+fibo 44	pbqp	4.650825
+harmonic 1500000000	greedy	6.060272
+harmonic 1500000000	pbqp	6.211937
+hash2 3000	greedy	3.716630
+hash2 3000	pbqp	3.852007
+heapsort 50000000	greedy	23.978200
+heapsort 50000000	pbqp	23.856417
+raytracer 500	greedy	9.778554
+raytracer 500	pbqp	10.268459
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	greedy	8.692435
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	pbqp	8.821458
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	greedy	4.596035
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	pbqp	4.688550
+ary 300000	greedy	1.319110
+ary 300000	pbqp	1.538694
+ackermann 12	greedy	4.252391
+ackermann 12	pbqp	4.399926
+chameneos 200000	greedy	5.015334
+chameneos 200000	pbqp	5.056574
+echo 200000	greedy	5.370614
+echo 200000	pbqp	5.429662
+fannkuch 11	greedy	1.172280
+fannkuch 11	pbqp	1.231036
+except 2000000	greedy	3.714094
+except 2000000	pbqp	3.718486
+fibo 44	greedy	4.986951
+fibo 44	pbqp	4.643537
+harmonic 1500000000	greedy	6.059309
+harmonic 1500000000	pbqp	6.083539
+hash2 3000	greedy	3.546203
+hash2 3000	pbqp	3.696842
+heapsort 50000000	greedy	23.101222
+heapsort 50000000	pbqp	22.872434
+raytracer 500	greedy	9.829839
+raytracer 500	pbqp	10.271479
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	greedy	8.625943
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	pbqp	8.795461
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	greedy	4.684133
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	pbqp	4.583602
+ary 300000	greedy	1.307391
+ary 300000	pbqp	1.481544
+ackermann 12	greedy	4.195857
+ackermann 12	pbqp	4.306248
+chameneos 200000	greedy	4.945918
+chameneos 200000	pbqp	4.957829
+echo 200000	greedy	5.212647
+echo 200000	pbqp	5.435039
+fannkuch 11	greedy	1.126020
+fannkuch 11	pbqp	1.167825
+except 2000000	greedy	3.779225
+except 2000000	pbqp	3.714686
+fibo 44	greedy	4.930877
+fibo 44	pbqp	4.605356
+harmonic 1500000000	greedy	6.053069
+harmonic 1500000000	pbqp	6.235311
+hash2 3000	greedy	3.627969
+hash2 3000	pbqp	3.880309
+heapsort 50000000	greedy	23.627725
+heapsort 50000000	pbqp	23.443621
+raytracer 500	greedy	9.965935
+raytracer 500	pbqp	10.389597
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	greedy	8.910208
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	pbqp	9.083176
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	greedy	4.709683
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	pbqp	4.607546
+ary 300000	greedy	1.317880
+ary 300000	pbqp	1.514237
+ackermann 12	greedy	4.200392
+ackermann 12	pbqp	4.285053
+chameneos 200000	greedy	4.917941
+chameneos 200000	pbqp	4.902649
+echo 200000	greedy	5.172415
+echo 200000	pbqp	5.190404
+fannkuch 11	greedy	1.129737
+fannkuch 11	pbqp	1.231018
+except 2000000	greedy	3.654725
+except 2000000	pbqp	3.660817
+fibo 44	greedy	4.939090
+fibo 44	pbqp	4.554783
+harmonic 1500000000	greedy	6.047894
+harmonic 1500000000	pbqp	6.053169
+hash2 3000	greedy	3.516084
+hash2 3000	pbqp	3.643651
+heapsort 50000000	greedy	22.915777
+heapsort 50000000	pbqp	23.481701
+raytracer 500	greedy	9.844712
+raytracer 500	pbqp	10.240010
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	greedy	8.884171
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	pbqp	8.875508
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	greedy	4.592282
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	pbqp	4.621278
+ary 300000	greedy	1.326538
+ary 300000	pbqp	1.518852
+ackermann 12	greedy	4.470022
+ackermann 12	pbqp	4.384046
+chameneos 200000	greedy	5.023693
+chameneos 200000	pbqp	5.121926
+echo 200000	greedy	5.384228
+echo 200000	pbqp	5.756352
+fannkuch 11	greedy	1.222004
+fannkuch 11	pbqp	1.162346
+except 2000000	greedy	3.697614
+except 2000000	pbqp	3.629650
+fibo 44	greedy	4.974014
+fibo 44	pbqp	4.642721
+harmonic 1500000000	greedy	6.080381
+harmonic 1500000000	pbqp	6.085915
+hash2 3000	greedy	3.517656
+hash2 3000	pbqp	3.801629
+heapsort 50000000	greedy	23.522454
+heapsort 50000000	pbqp	23.012779
+raytracer 500	greedy	9.819160
+raytracer 500	pbqp	10.203568
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	greedy	8.816937
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	pbqp	8.839545
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	greedy	4.645337
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	pbqp	4.678125
+ary 300000	greedy	1.361328
+ary 300000	pbqp	1.537005
+ackermann 12	greedy	4.246532
+ackermann 12	pbqp	4.322597
+chameneos 200000	greedy	4.894437
+chameneos 200000	pbqp	4.903129
+echo 200000	greedy	5.188596
+echo 200000	pbqp	5.188023
+fannkuch 11	greedy	1.126073
+fannkuch 11	pbqp	1.092059
+except 2000000	greedy	3.558756
+except 2000000	pbqp	3.598003
+fibo 44	greedy	4.897759
+fibo 44	pbqp	4.569380
+harmonic 1500000000	greedy	6.019618
+harmonic 1500000000	pbqp	6.028323
+hash2 3000	greedy	3.505349
+hash2 3000	pbqp	3.654316
+heapsort 50000000	greedy	23.576129
+heapsort 50000000	pbqp	23.081623
+raytracer 500	greedy	9.722900
+raytracer 500	pbqp	10.322361
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	greedy	8.762137
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	pbqp	8.928463
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	greedy	4.619001
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	pbqp	4.660520
+ary 300000	greedy	1.323854
+ary 300000	pbqp	1.493814
+ackermann 12	greedy	4.259275
+ackermann 12	pbqp	4.315424
+chameneos 200000	greedy	4.883311
+chameneos 200000	pbqp	4.983861
+echo 200000	greedy	5.284203
+echo 200000	pbqp	5.306679
+fannkuch 11	greedy	1.132871
+fannkuch 11	pbqp	1.184068
+except 2000000	greedy	3.661618
+except 2000000	pbqp	3.653973
+fibo 44	greedy	4.894077
+fibo 44	pbqp	4.640153
+harmonic 1500000000	greedy	6.097250
+harmonic 1500000000	pbqp	6.068800
+hash2 3000	greedy	3.546188
+hash2 3000	pbqp	3.704984
+heapsort 50000000	greedy	22.729468
+heapsort 50000000	pbqp	22.610935
+raytracer 500	greedy	9.799877
+raytracer 500	pbqp	10.141798
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	greedy	8.633724
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	pbqp	8.794688
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	greedy	4.499193
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	pbqp	4.538468
+ary 300000	greedy	1.329214
+ary 300000	pbqp	1.497101
+ackermann 12	greedy	4.190214
+ackermann 12	pbqp	4.297551
+chameneos 200000	greedy	4.917810
+chameneos 200000	pbqp	4.916583
+echo 200000	greedy	5.214729
+echo 200000	pbqp	5.180736
+fannkuch 11	greedy	1.211576
+fannkuch 11	pbqp	1.105313
+except 2000000	greedy	3.610573
+except 2000000	pbqp	3.623194
+fibo 44	greedy	4.896378
+fibo 44	pbqp	4.610179
+harmonic 1500000000	greedy	6.116375
+harmonic 1500000000	pbqp	6.110446
+hash2 3000	greedy	3.585262
+hash2 3000	pbqp	3.666028
+heapsort 50000000	greedy	22.279700
+heapsort 50000000	pbqp	22.285841
+raytracer 500	greedy	9.673667
+raytracer 500	pbqp	10.155192
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	greedy	8.677310
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	pbqp	8.745431
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	greedy	4.530400
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	pbqp	4.594231
+ary 300000	greedy	1.333329
+ary 300000	pbqp	1.491030
+ackermann 12	greedy	4.182191
+ackermann 12	pbqp	4.245701
+chameneos 200000	greedy	4.844243
+chameneos 200000	pbqp	4.886281
+echo 200000	greedy	5.217652
+echo 200000	pbqp	5.245514
+fannkuch 11	greedy	1.180967
+fannkuch 11	pbqp	1.119236
+except 2000000	greedy	3.604426
+except 2000000	pbqp	3.596545
+fibo 44	greedy	4.933574
+fibo 44	pbqp	4.624952
+harmonic 1500000000	greedy	6.047617
+harmonic 1500000000	pbqp	6.021225
+hash2 3000	greedy	3.583842
+hash2 3000	pbqp	3.812909
+heapsort 50000000	greedy	22.985808
+heapsort 50000000	pbqp	22.315814
+raytracer 500	greedy	9.710382
+raytracer 500	pbqp	10.349034
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	greedy	8.712758
+oggenc -Q -q10 /Users/psastras/Projects/fp15745/alloc/bench/jfk_1963_0626_berliner.wav	pbqp	8.812868
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	greedy	4.641945
+bzip2 --best -k -f /Users/psastras/Projects/fp15745/alloc/bench/gcc.txt	pbqp	4.565660

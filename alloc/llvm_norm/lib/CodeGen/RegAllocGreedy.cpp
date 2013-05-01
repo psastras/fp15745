@@ -1645,6 +1645,7 @@ unsigned RAGreedy::selectOrSplit(LiveInterval &VirtReg,
   // Finally spill VirtReg itself.
   NamedRegionTimer T("Spiller", TimerGroupName, TimePassesIsEnabled);
   LiveRangeEdit LRE(VirtReg, NewVRegs, *MF, *LIS, VRM, this);
+  errs() << "spilling " << VirtReg << " w: " << VirtReg.weight << "\n";
   spiller().spill(LRE);
   setStage(NewVRegs.begin(), NewVRegs.end(), RS_Done);
 

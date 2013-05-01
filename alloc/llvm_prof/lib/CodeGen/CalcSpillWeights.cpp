@@ -68,7 +68,6 @@ namespace {
 char ProfileInfoQueryPass::ID = 0;
 
 bool ProfileInfoQueryPass::runOnModule(Module &M) {
-  errs() << "Running\n";
   ProfileInfo &PI = getAnalysis<ProfileInfo>();
   std::vector<std::pair<Function*, double> > FunctionCounts;
   std::vector<std::pair<BasicBlock*, double> > Counts;
@@ -246,7 +245,7 @@ void VirtRegAuxInfo::CalculateWeightAndHint(LiveInterval &li, MachineFunction &M
       // if (writes && isExiting && LIS.isLiveOutOfMBB(li, mbb))
       //   weight *= 3;
 
-      totalWeight += (reads + writes) * weight;
+     totalWeight += (reads + writes) * weight;
       // totalWeight += (*g_BlockFreqs)[mi->getParent()->getBasicBlock()];
 
     }
@@ -300,5 +299,5 @@ void VirtRegAuxInfo::CalculateWeightAndHint(LiveInterval &li, MachineFunction &M
       totalWeight *= 0.5F;
   }
 
-  li.weight = normalizeSpillWeight(totalWeight, li.getSize());
+  li.weight = totalWeight / (float)li.getSize();//normalizeSpillWeight(totalWeight, li.getSize());
 }
