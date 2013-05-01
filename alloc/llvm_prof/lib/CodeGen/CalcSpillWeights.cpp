@@ -32,6 +32,8 @@
 #include "llvm/PassAnalysisSupport.h"
 #include "llvm/Module.h"
 
+#include "llvm/CodeGen/WeightHistory.h"
+
 using namespace llvm;
 
 char CalculateSpillWeights::ID = 0;
@@ -165,10 +167,10 @@ static unsigned copyHint(const MachineInstr *mi, unsigned reg,
 void VirtRegAuxInfo::CalculateWeightAndHint(LiveInterval &li, MachineFunction &MF) {
   MachineRegisterInfo &mri = MF.getRegInfo();
   const TargetRegisterInfo &tri = *MF.getTarget().getRegisterInfo();
-  MachineBasicBlock *mbb = 0;
-  MachineLoop *loop = 0;
-  unsigned loopDepth = 0;
-  bool isExiting = false;
+  //MachineBasicBlock *mbb = 0;
+  //MachineLoop *loop = 0;
+  //unsigned loopDepth = 0;
+  //bool isExiting = false;
   float totalWeight = 0;
   SmallPtrSet<MachineInstr*, 8> visited;
 
@@ -229,9 +231,9 @@ void VirtRegAuxInfo::CalculateWeightAndHint(LiveInterval &li, MachineFunction &M
 
 
     if (Spillable) {
-
-      totalWeight += (*g_BlockFreqs)[mi->getParent()->getBasicBlock()];
-
+      const BasicBlock* BB=mi->getParent()->getBasicBlock();
+      double scale=randWeight(BB);
+      totalWeight += scale*(*g_BlockFreqs)[BB];
     }
 
 
